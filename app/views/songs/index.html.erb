@@ -1,9 +1,8 @@
 <h1>Song List</h1> 
 
-<ol>
 <% @songs.each do |song| %>
-    <li><%= link_to song.title, song_path(song.id) %>
-    <%= link_to "Delete", song, method: :delete, data: {confirm: "Really?"} %></li>
-
+<div class="song">
+    <span><%= song.title %></span>
+    <%= link_to "Delete", song, method: :delete, data: {confirm: "Really?"} %>
+</div>
 <% end %>
-</ol>
