@@ -1,8 +1,12 @@
 <h1>Song List</h1> 
 
+<tbody>
 <% @songs.each do |song| %>
 <div class="song">
+    <tr>
     <span><%= song.title %></span>
     <%= link_to "Delete", song, method: :delete, data: {confirm: "Really?"} %>
+    </tr>
 </div>
 <% end %>
+</tbody>
