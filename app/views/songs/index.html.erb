@@ -2,7 +2,6 @@
 
 <tbody>
 <% @songs.each do |song| %>
-<div class="song">
     <tr>
     <%= song.title %>
     <%= song.release_year %>
@@ -10,6 +9,5 @@
     <%= song.genre %>
     <%= link_to "Delete", song, method: :delete, data: {confirm: "Really?"} %>
     </tr>
-</div>
 <% end %>
 </tbody>
